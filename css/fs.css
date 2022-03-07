@@ -1,0 +1,58 @@
+#explore {
+    height:100vh;
+    width:100%;
+    background:rgb(255, 255, 255);
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+#explore::after {
+width:100%;
+height:100%;
+content: '';
+position:absolute;
+z-index: 10;
+top:0;
+left:0;
+background:rgba(0,0,0,0.6)
+}
+
+
+#explore video {
+width:100%;
+height:100%;
+position:absolute;
+top:0;
+left:0;
+z-index:5;
+object-fit:cover;
+}
+
+#explore .cap {
+
+position:relative;
+z-index: 25;
+text-align:center;
+color:#ffffff;
+}
+
+
+
+#explore .cap h1 {
+
+text-transform: uppercase;
+font-size:6rem;
+font-family: 'Shalimar', cursive;
+margin-bottom:0.5rem;
+}
+
+#explore .cap h2 {
+font-style: oblique;
+font-weight:800;
+font-size:1rem;
+margin:0;
+font-family: 'PT Sans', sans-serif;
+}
+
+
