@@ -1,0 +1,100 @@
+<doctype html>
+    <html lang="en">
+      <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Pushster&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Amita&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Waterfall&display=swap" rel="stylesheet"> 
+        <title>FOUR SEASONS</title>
+
+        <style>
+          .navbar{
+          background: linear-gradient(90deg, rgba(7,1,58,0.9500934162727591) 23%, rgba(179,121,200,1) 87%); 
+          } 
+      </style>
+
+      </head>
+      <body>
+        <nav class="navbar navbar-expand-lg navbar-dark " >
+          <div class="logo">
+            <img src="../static/imgs/4s.png" height="55" width="55" >
+          </div>
+            <div class="container-fluid" id="section1">
+              <a class="navbar-brand " href="#"  style="font-family:'Caveat', cursive; font-size: xx-large; color: rgb(188, 252, 13);" >Four seasons</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <h1 class="text fst-italic" style="font-size: small; color: cornsilk;">Be boundless</h1>
+                <span class="navbar-toggler-icon"></span>
+                
+              </button>
+              
+              <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active "  aria-current="page" href="/home" style="font-size: x-large;"><img src="../static/imgs/home.png" height="30cm" width="30cm"> Home </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active " aria-current="page" href="/login-section" style="font-size: x-large;"><img src="../static/imgs/login.png" height="30cm" width="30cm">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active"  aria-current="page" href="/reg-section" style="font-size: x-large;"><img src="../static/imgs/reg.png" height="30cm" width="30cm">Sign Up</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active " aria-current="page" href="/joinus" style="font-size: x-large;"><img src="../static/imgs/emp.png" height="30cm" width="30cm">Join Us</a>
+                  </li>
+                </ul>
+                
+              </div>
+            </div>
+        </nav>
+    
+        
+        <div class ="container">
+          
+            <form class=" my-5 " method="POST" action="/lgn-usr">
+                <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                <div class=" my-5"></div>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                <div class="card ">
+                  <span class="px-md-5 mt-4">
+                    <h5 class="card-title text-center" style="font-family: 'Cookie', cursive;">LOGIN HERE</h5>
+                    <p class="card-text text-center">Please Enter your account details below.</p>
+                    
+    
+                    <div class="mb-3 ">
+                      <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label"style="font-family:'Merriweather Sans', sans-serif;">USER NAME  </label>
+                        <input type="name" class="form-control" id="username" name="username" placeholder=" (Ex: Mark .Z)" required > 
+                      </div>
+                      <div class="mb-3">
+                            <label for="exampleFormControlTextarea2" class="form-label"style="font-family:'Merriweather Sans', sans-serif;">USER ID  </label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter registered email id (Ex:abc@gmail.com) " required> 
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlTextarea3" class="form-label"style="font-family:'Merriweather Sans', sans-serif;">PASSWORD  </label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                        <small style="font-size:x-small">Password must be eight characters including one uppercase letter, one special character and alphanumeric characters</small>
+                      </div>
+
+                    <h5 class="text-danger">{{msg}}</h5>
+                    <button class="btn btn-outline-success " >LOGIN</button> 
+                    <h5 class="text-center my-3" ><a href="/reg-usr" class="link-secondary">New to Four seasons? sign up now!!</a> </h5>
+                    <div class="mb-4"></div>
+                  </span>
+                </div>
+                </div>
+          
+        </div>  
+           
+      </body>       
+    </html>                  

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Vujahday+Script&display=swap" rel="stylesheet">
+    <style>
+        .navbar{   background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(129,193,214,1) 0%, rgba(103,213,220,1) 31%, rgba(97,191,211,1) 62%, rgba(139,234,253,1) 95%)}
+    </style>
+    <title>bus</title>
+  </head>
+  <body>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/6206acd2b9e4e21181bead6e/1frl1668u';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+      </script>
+    <!--End of Tawk.to Script-->
+
+
+    <nav class="navbar navbar-light">
+        <div class="container-fluid mx-auto order-0" >
+          <a class="navbar-brand my-1 mx-auto  " style="font-size: xx-large;font-family: 'Tinos', serif; ">BUS</a>
+
+        </div>
+    </nav>
+    <!--start of corosal bar-->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../static/imgs/buspg.jpg" class="d-block w-100" alt="..." style="height: 900px; object-fit: cover;">
+          </div>
+        </div>
+        
+            
+    </div>
+    <!--end of corosal bar-->
+    <!--end of top of page-->
+    <!--start of cards-->
+      {% for bus in bus %}
+      <div class="card border-danger" style="height: 17rem;width: 60rem; margin-left: 20rem; margin-top: 4rem;">
+          <div class="card-body">
+            <img src="{{bus.bus_image}}" style="height: 5rem;" >
+            <h1 style="font-size: x-large; margin-left: 6rem; margin-top: -5rem;font-family:'Vujahday Script', cursive;">{{bus.bus_comp}}</h1>
+            <p style="margin-left: 6rem;">{{bus.bus_type}}</p>
+            <p style="margin-left: 19rem;margin-top: -5rem;">Departure</p>
+            <p style="margin-left: 37rem;margin-top: -2.5rem;">Arrival</p>
+            <h2 style="margin-left: 19rem;font-family: 'Oswald', sans-serif;">{{bus.bus_from}}</h2>
+            <p style="margin-left: 19rem;" >{{bus.bus_deptime}}</p>
+            <p class="font-bold" style= "margin-left: 16rem; margin-top: -0.4rem;">{{bus.bus_dept}}</p>
+            <h3 style="margin-left: 37rem; margin-top: -7.8rem;font-family: 'Oswald', sans-serif;">{{bus.bus_to}}</h3>
+            <p style="margin-left: 37rem;" >{{bus.bus_arrtime}}</p>
+            <p class="font-bold" style ="margin-left:36rem;margin-top: -0rem;">{{bus.bus_arr}}</p>
+            <img src="../static/imgs/arrow.png" style="margin-left: 29.5rem; width: 5rem; margin-top: -14rem;">
+            <p  style="margin-left: 50rem; margin-top: -9rem;margin-bottom: 4rem; font-size: xx-large; color: rgb(255, 0, 0);font-style: italic;">&#x20b9;{{bus.bus_price}}</p>
+            <a class="btn btn-success" type="submit" style="margin-left: 50rem; margin-top: -1rem;"  href="bus-info/{{bus.bus_id}}">Book now </a>
+            <p>Amenities: <img src="../static/imgs/blanket.webp" style="height: 3rem;" title="Pillow & Blanket"> <img src="../static/imgs/bottle.png " style="height: 3rem;"title="Water Bottle"> <img src="../static/imgs/charger.png" style="height: 3rem;"title="Charging slot"></p>
+          </div>
+      </div>
+
+      {% endfor %}
+
+          -->
+        <!--start of page navigation-->
+        <p style="margin-left: 47.5rem; margin-bottom: -5rem;margin-top: 5rem;">Page 1 of 3</p>
+        <nav aria-label="Page navigation example" style="margin-left: 45rem; margin-top: 5rem;">
+          <ul class="pagination" >
+            <li class="page-item disabled" >
+              <a class="page-link " href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="/bus">1</a></li>
+            <li class="page-item"><a class="page-link" href="/bus1">2</a></li>
+            <li class="page-item"><a class="page-link" href="/bus2">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="/bus2" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!--end of page navigation-->
+
+        <!--start of footer-->
+        <div class="card-footer my-5" id="section2" style="background-color: rgb(231, 204, 204); height: 20rem; ">
+          <img src ="../static/imgs/4s.png " style ="height:7rem;width:7rem;">
+          <h4 class="mt-1"style="font-style:italic;margin-left:5rem;" >- Be boundless</h4> 
+          <h6 class="mt-3 "style="font-style:italic;margin-left:20rem;">Email : www.fourseasons.in</h6>
+          <h6 style="font-style:italic;margin-left:35rem;margin-top: -1.5rem;">call us  : (+91)-9030456622</h6>
+          <h6 style="text-align: center;margin-left: 15rem;margin-right: 12rem;margin-top: -11rem;">Traveling is like an addiction-once you start traveling,
+             you barely can sit back home.
+              Traveling does not mean only visiting a certain place.
+              It is also means visiting the culture of the place as well.
+               Want to travel with comfort? We at the FOUR SEASONS are here to serve you with everything you need. 
+               We are here to make your traveling dreams complete
+          </h6>
+          <h1 style="margin-left: 1100px; font-size: x-large; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Follows us on</h1>
+          <div class="my-3" style="margin-left: 1100px;">
+            <img src ="../static/imgs/fb.png" style="height:3rem;width:3rem;"> 
+            <p style="margin-left: -10px;">Facebook</p>
+          </div>
+          <div class="md-5" style="margin-left: 1200px;margin-top: -85px;">
+            <img src ="../static/imgs/ig.png" style="height:3rem;width:3rem;">
+            <p style="margin-left: -10px;">Instagram</p>
+          </div>
+            <div class="md-5" style="margin-left: 1300px; margin-top: -90px;">
+            <img src ="../static/imgs/twitter.png" style="height:3rem;width:3rem;">
+            <p style="margin-left: -10px;">Twitter</p>
+          </div>
+          <div class="border border-dark mt-5"></div>
+            <small class="text mt-2" style="margin-left: 100px;margin-top: 8px;"><img src="../static/imgs/copyright.png" style="height: 2rem;width: 2rem;">2021 Four seasons, travel agency Inc . All rights reserved according to privacy policy.</small>
+            <small class="text" style="margin-left: 100px;margin-top: 5px;">Terms and conditions applied.</small>
+            <h5 class="text" style="margin-left: 1100px;margin-top: -6px;font-style: italic;">Created by Bhavana.S & Anushree.R</h5>
+    </div>
+        <!--end of footer-->
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

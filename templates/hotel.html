@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="../static/hotel.css" ref="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pushster&display=swap" rel="stylesheet"> 
+    <style>
+        .navbar{ background: rgb(169,165,255);
+                background: linear-gradient(90deg, rgba(169,165,255,1) 8%, rgba(154,154,249,1) 31%, rgba(172,241,255,1) 67%);   }
+    </style>
+    <title>hotel</title>
+    
+  </head>
+  <body >
+      <!--Start of Tawk.to Script-->
+      <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/6206acd2b9e4e21181bead6e/1frl1668u';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+        </script>
+      <!--End of Tawk.to Script-->
+
+    <nav class="navbar navbar-light">
+        <div class="container-fluid mx-auto order-0" >
+          <a class="navbar-brand my-1 mx-auto  " style="font-size: xx-large;font-family: 'Tinos', serif; ">HOTELS</a>
+
+        </div>
+    </nav>
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../static/imgs/l.jpg" class="d-block w-100" style="height: 450px; object-fit: cover;" alt="...">
+        </div>
+      </div>
+      
+    </div>
+
+   
+
+    {% for hotel in hotel %}
+
+      <div class="my-5" ></div>
+      <div class="card mb-3" style="max-width: 900px; max-height: 15rem; margin-left: 450px;" >
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{hotel.hotel_image}}" class="img-fluid rounded-start" alt="..." style="height: 15rem;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title" style="font-family: 'Pushster', cursive; font-size: xx-large;">{{hotel.hotel_name}}</h5>
+              <p class="card-text"><img src="../static/imgs/loc.png"> {{hotel.hotel_location}} </p>
+              <p class="card-text">Ratings:</p> <img src="{{hotel.hotel_ratings}}" style="height: 7rem; width: 7rem; margin-top: -85px;margin-left: 60px;">
+              <p class="card-text" style="margin-left: 450px; margin-top: -5rem; font-size: large;">&#x20b9;{{hotel.hotel_price}}/night</p>
+              <a class="btn btn-success"  type="submit" style="font-size: large; margin-left: 28rem;" href="hotel-info/{{hotel.hotel_id}}">Book now</a>
+              <p style="margin-top: -2rem;font-style: italic;">Aminities : <img src="../static/imgs/breakfast.png" style="height: 2rem;"> Free Breakfast <img src="../static/imgs/Ac.png" style="height: 2rem;">  24/7 AC </p>
+              <p ><img src="../static/imgs/wifi.png"style="height:2rem;"> Free Wi-fi access </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    {% endfor %}
+    
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item disabled">
+        <a class="page-link">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="/hotel">1</a></li>
+      <li class="page-item"><a class="page-link" href="/hotel2">2</a></li>
+      <li class="page-item"><a class="page-link" href="/hotel3">3</a></li>
+      <li class="page-item"><a class="page-link" href="/hotel4">4</a></li>
+      <li class="page-item">
+        <a class="page-link" href="/hotel2">Next</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="card-footer my-5" id="section2" style="background-color: rgb(231, 204, 204); height: 20rem; ">
+    <img src ="../static/imgs/4s.png " style ="height:7rem;width:7rem;">
+    <h4 class="mt-1"style="font-style:italic;margin-left:5rem;" >- Be boundless</h4> 
+    <h6 class="mt-3 "style="font-style:italic;margin-left:20rem;">Email : www.fourseasons.in</h6>
+    <h6 style="font-style:italic;margin-left:35rem;margin-top: -1.5rem;">call us  : (+91)-9030456622</h6>
+    <h6 style="text-align: center;margin-left: 15rem;margin-right: 12rem;margin-top: -11rem;">Traveling is like an addiction-once you start traveling,
+       you barely can sit back home.
+        Traveling does not mean only visiting a certain place.
+        It is also means visiting the culture of the place as well.
+         Want to travel with comfort? We at the FOUR SEASONS are here to serve you with everything you need. 
+         We are here to make your traveling dreams complete
+    </h6>
+    <h1 style="margin-left: 1100px; font-size: x-large; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Follows us on</h1>
+    <div class="my-3" style="margin-left: 1100px;">
+      <img src ="../static/imgs/fb.png" style="height:3rem;width:3rem;"> 
+      <p style="margin-left: -10px;">Facebook</p>
+    </div>
+    <div class="md-5" style="margin-left: 1200px;margin-top: -85px;">
+      <img src ="../static/imgs/ig.png" style="height:3rem;width:3rem;">
+      <p style="margin-left: -10px;">Instagram</p>
+    </div>
+      <div class="md-5" style="margin-left: 1300px; margin-top: -90px;">
+      <img src ="../static/imgs/twitter.png" style="height:3rem;width:3rem;">
+      <p style="margin-left: -10px;">Twitter</p>
+    </div>
+    <div class="border border-dark mt-5"></div>
+      <small class="text mt-2" style="margin-left: 100px;margin-top: 8px;"><img src="../static/imgs/copyright.png" style="height: 2rem;width: 2rem;">2021 Four seasons, travel agency Inc . All rights reserved according to privacy policy.</small>
+      <small class="text" style="margin-left: 100px;margin-top: 5px;">Terms and conditions applied.</small>
+      <h5 class="text" style="margin-left: 1100px;margin-top: -6px;font-style: italic;">Created by Bhavana.S & Anushree.R</h5>
+</html>
+
+
+
+
+
